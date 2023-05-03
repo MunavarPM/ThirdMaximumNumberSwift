@@ -1,0 +1,14 @@
+class Solution {
+    func thirdMax(_ nums: [Int]) -> Int {
+        //was coverting the array to the set for removing the dublicate value of the array and we was sorted that array by .sorted(by: >) its means sorted by greater than because in set doesn't have dublicate value but set number are don't place by sort so we did it on using .sorted(by: >)
+        // then we get array without dublicate value and array with sorted😎
+        let uniqueSortedNumbers = Array(Set(nums)).sorted(by: >)
+        let numCount = uniqueSortedNumbers.count
+        
+        if numCount >= 3 {
+            return uniqueSortedNumbers[2]
+        } else {
+            return uniqueSortedNumbers[0]
+        }
+    }
+ }
